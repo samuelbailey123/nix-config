@@ -1,2 +1,1 @@
-# core-tools
-Core nix tools for myself
+# nix-config #
