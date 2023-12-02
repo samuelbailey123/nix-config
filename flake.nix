@@ -1,5 +1,3 @@
-# flake.nix
-
 {
   description = "Rust Flake";
 
@@ -15,10 +13,9 @@
     {
       packages.${nixpkgs.system}.rust = pkgs.rustChannelOf {
         channel = "stable";
-        date = "2021-12-01"; # Adjust to the desired date or use "nightly" for the latest nightly version
+        date = "nightly";
       };
 
       defaultPackage.${nixpkgs.system} = self.packages.${nixpkgs.system}.rust;
     };
 }
-
