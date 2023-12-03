@@ -22,14 +22,19 @@
       });
     in
     {
-      # I assume I need to import here?
-      devShells = forAllSystems ({ pkgs }: {
-        default = pkgs.mkShell {
-          # The Nix packages provided in the environment
-          packages = with pkgs; [
-            rustc
-          ];
-        };
-      });
+    templates = {
+      packages = {
+        description = ''
+          Core Packages
+        '';
+        path = ./core/packages;
+      };
+      shell = {
+        description = ''
+          Core Shell
+        '';
+        path = ./core/shell.nix;
+      };
     };
+  };
 }
