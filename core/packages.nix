@@ -1,55 +1,57 @@
 { pkgs, ...}:{
 
+    # I think I need an input and output here? This file doens't clean nicely
+
     home.packages = with pkgs; [
-      bat
-      curl
-      coreutils
-      exa
-      git
-      gh
-      helm
-      jq
-      kubectl
-      k9s
-      pgcli
-      rclone
-      rsync
-      watch
-      wget
-      tmux
-      vault
-      vim
-      telnet
-      starship
-      unzip
+        bat
+        curl
+        coreutils
+        exa
+        git
+        gh
+        helm
+        jq
+        kubectl
+        k9s
+        pgcli
+        rclone
+        rsync
+        watch
+        wget
+        tmux
+        vault
+        vim
+        telnet
+        starship
+        unzip
     ];
 
-  programs.home-manager = {
+    programs.home-manager = {
     enable = true;
-  };
+    };
 
-  programs.bat = {
+    programs.bat = {
     enable = true;
-  };
+    };
 
-  programs.jq = {
+    programs.jq = {
     enable = true;
-  };
+    };
 
-  programs.git = {
+    programs.git = {
     enable = true;
     extraConfig = {
-      push = {
+        push = {
         default = "simple";
         autoSetupRemote = true;
-      };
-      help = {
+        };
+        help = {
         autocorrect = "10";
-      };
+        };
     };
     difftastic = {
-      enable = true;
-      display = "side-by-side-show-both";
+        enable = true;
+        display = "side-by-side-show-both";
     };
-  };
+    };
 }
