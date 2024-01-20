@@ -3,7 +3,23 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs;
         [ neofetch
-          
+          vim
+          asdf-vm
+          bat
+          emacs
+          fzf
+          git
+          gh
+          jq
+          k9s
+          kubectl
+          kubectx
+          minikube
+          pgcli
+          inetutils
+          watch
+          wget
+          zoom-us
         ];
 
       # Auto upgrade nix package and the daemon service.

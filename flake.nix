@@ -19,7 +19,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.samuelbailey = import ./home-manager/home.nix;
+            home-manager.users.samuelbailey = import ./home-manager/home-imubit.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
@@ -27,7 +27,7 @@
        ];
     };
 
-    darwinConfigurations."test" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."Samuels-MacBook-Pro" = nix-darwin.lib.darwinSystem {
       modules = [ ./core/packages.nix ];
     };
 
