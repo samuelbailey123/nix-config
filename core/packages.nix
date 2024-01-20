@@ -19,8 +19,12 @@
           inetutils
           watch
           wget
+          nixpkgs-fmt
           zoom-us
         ];
+
+      # This allows for most cask apps
+      nixpkgs.config.allowUnfree = true;
 
       # Auto upgrade nix package and the daemon service.
       services.nix-daemon.enable = true;

@@ -12,7 +12,6 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#IMUBIT-SAMUELB
     darwinConfigurations."IMUBIT-SAMUELB" = nix-darwin.lib.darwinSystem {
       modules = [ ./core/packages.nix
       home-manager.darwinModules.home-manager
